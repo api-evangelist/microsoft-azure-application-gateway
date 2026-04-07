@@ -1,16 +1,14 @@
 aid: microsoft-azure-application-gateway
-url: 
-  https://raw.githubusercontent.com/api-evangelist/microsoft-azure-application-gateway/refs/heads/main/apis.yml
+url: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-application-gateway/refs/heads/main/apis.yml
 apis:
   - aid: microsoft-azure-application-gateway:rest-api
     name: Azure Application Gateway REST API
     tags:
-      - Load Balancing
-      - WAF
       - Layer 7
+      - Load Balancing
       - Reverse Proxy
-    image: 
-      https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+      - WAF
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     baseURL: https://management.azure.com/
     humanURL: https://learn.microsoft.com/en-us/rest/api/application-gateway/
     properties:
