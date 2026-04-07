@@ -1,5 +1,6 @@
 aid: microsoft-azure-application-gateway
-url: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-application-gateway/refs/heads/main/apis.yml
+url: 
+  https://raw.githubusercontent.com/api-evangelist/microsoft-azure-application-gateway/refs/heads/main/apis.yml
 apis:
   - aid: microsoft-azure-application-gateway:rest-api
     name: Azure Application Gateway REST API
@@ -8,14 +9,17 @@ apis:
       - WAF
       - Layer 7
       - Reverse Proxy
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: 
+      https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     baseURL: https://management.azure.com/
     humanURL: https://learn.microsoft.com/en-us/rest/api/application-gateway/
     properties:
       - url: https://learn.microsoft.com/en-us/rest/api/application-gateway/
         type: Documentation
     description: >-
-      Azure Application Gateway REST API enables management of layer-7 load balancers with SSL termination, URL-based routing, multi-site hosting, and web application firewall capabilities for protecting web applications.
+      Azure Application Gateway REST API enables management of layer-7 load balancers
+      with SSL termination, URL-based routing, multi-site hosting, and web application
+      firewall capabilities for protecting web applications.
 common:
   - type: Portal
     url: https://portal.azure.com/
@@ -31,3 +35,6 @@ modified: '2026-03-16'
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
+description: >-
+  Learn how the Application Gateway is a Network Service which provides HTTP Load
+  balancing as a Service to Azure customers.
