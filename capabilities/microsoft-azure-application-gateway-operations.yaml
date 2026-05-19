@@ -1,0 +1,70 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Azure Application Gateway REST API — Operations
+  description: 'Azure Application Gateway REST API — Operations. 1 operations. Lead operation: Azure Application Gateway REST
+    API List operations. Self-contained Naftiko capability covering one Microsoft Azure Application Gateway business surface.'
+  tags:
+  - Microsoft Azure Application Gateway
+  - Operations
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    MICROSOFT_AZURE_APPLICATION_GATEWAY_API_KEY: MICROSOFT_AZURE_APPLICATION_GATEWAY_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: microsoft-azure-application-gateway-operations
+    baseUri: https://management.azure.com
+    description: Azure Application Gateway REST API — Operations business capability. Self-contained, no shared references.
+    resources:
+    - name: providers-Microsoft.Network-operations
+      path: /providers/Microsoft.Network/operations
+      operations:
+      - name: listoperations
+        method: GET
+        description: Azure Application Gateway REST API List operations
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    authentication:
+      type: bearer
+      token: '{{env.MICROSOFT_AZURE_APPLICATION_GATEWAY_API_KEY}}'
+  exposes:
+  - type: rest
+    namespace: microsoft-azure-application-gateway-operations-rest
+    port: 8080
+    description: REST adapter for Azure Application Gateway REST API — Operations. One Spectral-compliant resource per consumed
+      operation, prefixed with /v1.
+    resources:
+    - path: /v1/providers/microsoft-network/operations
+      name: providers-microsoft-network-operations
+      description: REST surface for providers-Microsoft.Network-operations.
+      operations:
+      - method: GET
+        name: listoperations
+        description: Azure Application Gateway REST API List operations
+        call: microsoft-azure-application-gateway-operations.listoperations
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: microsoft-azure-application-gateway-operations-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Azure Application Gateway REST API — Operations. One tool per consumed operation, routed
+      inline through this capability's consumes block.
+    tools:
+    - name: azure-application-gateway-rest-api
+      description: Azure Application Gateway REST API List operations
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: microsoft-azure-application-gateway-operations.listoperations
+      outputParameters:
+      - type: object
+        mapping: $.
