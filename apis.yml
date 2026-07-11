@@ -32,6 +32,10 @@ apis:
       Azure Application Gateway REST API enables management of layer-7 load balancers with SSL termination, URL-based
       routing, multi-site hosting, and web application firewall capabilities for protecting web applications.
 common:
+  - type: DomainSecurity
+    url: security/microsoft-azure-application-gateway-domain-security.yml
+  - type: Authentication
+    url: authentication/microsoft-azure-application-gateway-authentication.yml
   - type: OAuthScopes
     url: scopes/microsoft-azure-application-gateway-scopes.yml
   - type: GitHubOrganization
