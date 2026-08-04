@@ -1,0 +1,16 @@
+{
+  "provider": "microsoft-azure-application-gateway",
+  "sources": [
+    "microsoft-azure-application-gateway-application-gateways-api-openapi.yml",
+    "microsoft-azure-application-gateway-operations-api-openapi.yml"
+  ],
+  "outputs": [
+    "microsoft-azure-application-gateway-application-gateways-api-openapi.yml",
+    "microsoft-azure-application-gateway-operations-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
