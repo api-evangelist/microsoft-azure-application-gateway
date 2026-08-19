@@ -3,6 +3,7 @@ name: Azure Application Gateway
 description: >-
   Learn how the Application Gateway is a Network Service which provides HTTP Load balancing as a Service to Azure
   customers.
+specificationVersion: '0.23'
 accessModel:
   pricing: freemium
   onboarding: self-serve
