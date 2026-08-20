@@ -22,6 +22,11 @@ url: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-applicatio
 created: '2026-03-13'
 modified: '2026-05-19'
 tags:
+  - Layer-7
+  - Load Balancing
+  - Reverse Proxy
+  - WAF
+tags_raw:
   - Layer 7
   - Load Balancing
   - Reverse Proxy
@@ -45,7 +50,8 @@ apis:
   description: Operations operations
   humanURL: https://learn.microsoft.com/en-us/rest/api/application-gateway/
   baseURL: https://management.azure.com/
-  tags:
+  tags: []
+  tags_raw:
   - Operations
   properties:
   - type: OpenAPI
