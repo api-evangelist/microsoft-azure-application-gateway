@@ -3,6 +3,18 @@ name: Azure Application Gateway
 description: >-
   Learn how the Application Gateway is a Network Service which provides HTTP Load balancing as a Service to Azure
   customers.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 specificationVersion: '0.23'
 accessModel:
   pricing: freemium
