@@ -1,4 +1,4 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
   title: Azure Application Gateway REST Application Gateways Operations API
   description: Azure Application Gateway is a web traffic load balancer enabling traffic management with features such as URL-based routing, SSL termination, and a Web Application Firewall. The REST API manages gateways, listeners, rules, and backend pools.
@@ -37,24 +37,6 @@ paths:
                 $ref: '#/components/schemas/ErrorResponse'
 components:
   schemas:
-    Operation:
-      type: object
-      properties:
-        name:
-          type: string
-        display:
-          type: object
-          properties:
-            provider:
-              type: string
-            resource:
-              type: string
-            operation:
-              type: string
-            description:
-              type: string
-        isDataAction:
-          type: boolean
     OperationList:
       type: object
       properties:
@@ -76,6 +58,24 @@ components:
               type: string
             target:
               type: string
+    Operation:
+      type: object
+      properties:
+        name:
+          type: string
+        display:
+          type: object
+          properties:
+            provider:
+              type: string
+            resource:
+              type: string
+            operation:
+              type: string
+            description:
+              type: string
+        isDataAction:
+          type: boolean
   parameters:
     apiVersion:
       name: api-version

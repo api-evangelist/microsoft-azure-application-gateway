@@ -71,6 +71,8 @@ apis:
   - type: Documentation
     url: https://learn.microsoft.com/en-us/rest/api/application-gateway/
 common:
+  - type: Website
+    url: https://www.microsoft.com/
   - type: AgenticAccess
     url: agentic-access/microsoft-azure-application-gateway-agentic-access.yml
   - type: DomainSecurity
@@ -98,3 +100,5 @@ common:
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
+x-parent: microsoft-azure
+x-relationship: product
