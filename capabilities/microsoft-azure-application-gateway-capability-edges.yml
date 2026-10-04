@@ -1,0 +1,24 @@
+slug: microsoft-azure-application-gateway
+provider: Azure Application Gateway
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Software & Technology
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 1
+edges:
+- tag: Application Gateways
+  spec_file: microsoft-azure-application-gateway-application-gateways-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.82
+  evidence: '"Azure Application Gateway is a web traffic load balancer"; createOrUpdateApplicationgateways
+    on Microsoft.Network/applicationGateways'
+  reason: Lifecycle management of network load-balancing resources is cloud/network infrastructure management.

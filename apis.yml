@@ -71,6 +71,9 @@ apis:
   - type: Documentation
     url: https://learn.microsoft.com/en-us/rest/api/application-gateway/
 common:
+  - type: CapabilityMap
+    url: capabilities/microsoft-azure-application-gateway-capability-edges.yml
+    name: Azure Application Gateway Business Capability Map
   - type: Website
     url: https://www.microsoft.com/
   - type: AgenticAccess
