@@ -71,6 +71,12 @@ apis:
   - type: Documentation
     url: https://learn.microsoft.com/en-us/rest/api/application-gateway/
 common:
+  - type: Plans
+    url: plans/microsoft-azure-application-gateway-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/microsoft-azure-application-gateway-rate-limits.yml
+  - type: FinOps
+    url: finops/microsoft-azure-application-gateway-finops.yml
   - type: CapabilityMap
     url: capabilities/microsoft-azure-application-gateway-capability-edges.yml
     name: Azure Application Gateway Business Capability Map
